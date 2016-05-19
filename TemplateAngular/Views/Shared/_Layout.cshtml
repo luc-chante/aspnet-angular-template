@@ -12,7 +12,7 @@
         <script src="~/lib/es6-shim/es6-shim.js"></script>
         <script src="~/lib/zone.js/dist/zone.js"></script>
         <script src="~/lib/reflect-metadata/Reflect.js"></script>
-        <script src="~/lib/systemjs/dist/system.js"></script>
+        <script src="~/lib/system.js/dist/system.js"></script>
     </environment>
     <environment names="Staging,Production">
         <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/css/bootstrap.min.css"
@@ -20,15 +20,15 @@
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
 
-        <script src="~/lib/vendor/es6-shim/es6-shim.min.js"></script>
-        <script src="~/lib/vendor/zone.js/dist/zone.js"></script>
-        <script src="~/lib/vendor/reflect-metadata/Reflect.js"></script>
-        <script src="~/lib/vendor/systemjs/dist/system.src.js"></script>
+        <script src="~/lib/es6-shim/es6-shim.min.js"></script>
+        <script src="~/lib/zone.js/dist/zone.js"></script>
+        <script src="~/lib/reflect-metadata/Reflect.js"></script>
+        <script src="~/lib/system.js/dist/system.src.js"></script>
     </environment>
 
     <script src="~/js/systemjs.config.js"></script>
     <script>
-        System.import('js/main').then(null, console.error.bind(console));
+        System.import('app/main').then(null, console.error.bind(console));
     </script>
 </head>
 @Html.Raw(@"<base href=""/"">")
